@@ -1,18 +1,25 @@
 import { Component } from 'react';
-import styled from 'styled-components';
+const classNames = require('classnames');
 
-const Container = styled.div`
-  padding: 10px;
-  border: 1px solid black;
-  width: 60px;
-`;
+const numberClasses = [
+  {
+    button: true,
+    number: true
+  }
+]
 
 class Number extends Component {
   render() {
-    return (
-      <Container onClick={() => this.props.onClick(this.props.value)}>
-        {this.props.value}
-      </Container>
+    const {value} = this.props;
+    return ( 
+      <button 
+        id={`_${value}`} 
+        className={classNames(numberClasses)} 
+        onClick={() => this.props.onClick(value)}>
+
+        {value}
+
+      </button>
     );
   }
 }

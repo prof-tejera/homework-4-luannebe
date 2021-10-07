@@ -1,18 +1,25 @@
 import { Component } from 'react';
-import styled from 'styled-components';
+const classNames = require('classnames');
 
-const Container = styled.div`
-  padding: 10px;
-  border: 1px solid black;
-  width: 60px;
-`;
+const operatorClasses = [
+  {
+    button: true,
+    operator: true
+  }
+]
 
 class Operator extends Component {
   render() {
+    const {id, value} = this.props;
     return (
-      <Container onClick={() => this.props.onClick(this.props.value)}>
-        {this.props.value}
-      </Container>
+      <button 
+        id={id}
+        className={classNames(operatorClasses)}
+        onClick={() => this.props.onClick(value)}>
+
+        {value}
+
+      </button>
     );
   }
 }

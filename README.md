@@ -8,6 +8,11 @@ In this assignment you will start with a basic calculator and style it using `CS
 
 As you can tell the current layout needs a lot of styling work. Modify the layout, components, and calculator logic however you want. Everything is free game!
 
+## Notes about My Project
+1. I used CSS Grid rather than Flex, because I wanted to learn more about Grid.
+2. There is a decimal point on the calculator, but I did not implement it.
+3. The calculator width expands to accommodate the overflow of text. I did not mean this to be a serious solution; I was just attempting to learn more about css.
+
 ## Deliverable
 
 1. Style the calculator however you want. Feel free to use any colors, layout, and animations that you would like. Be as creative as you want.
